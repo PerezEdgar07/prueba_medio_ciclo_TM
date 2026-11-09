@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Catálogo 3D - Grapadoras</title>
+
+    <!-- Archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Librería para visualizar modelos 3D -->
+    <script type="module"
+        src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js">
+    </script>
+</head>
+
+<body>
+
+    <main class="game-container">
+
+        <!-- ENCABEZADO -->
+        <header class="top-header">
+
+            <div class="game-brand">
+                <div class="brand-icon">✦</div>
+
+                <div>
+                    <h1>STAPLE <span>VISION 3D</span></h1>
+                    <p>CSS ANIMATED VISUALIZATION</p>
+                </div>
+            </div>
+
+            <div class="mission-info">
+                <span class="status-dot"></span>
+                CSS VISOR ACTIVO
+            </div>
+
+            <div class="level-indicator">
+                <span>MODELOS</span>
+                <strong id="level-counter">01 & 02</strong>
+            </div>
+
+        </header>
+
+        <!-- ESCENARIO CENTRAL -->
+        <section class="game-dashboard">
+
+            <section class="battle-section">
+
+                <div class="battle-header">
+
+                    <div>
+                        <span class="section-label">
+                            ENTORNO DE SIMULACIÓN CSS
+                        </span>
+
+                        <h2 id="level-title">
+                            Grapadoras Serie Industrial
+                        </h2>
+
+                        <p id="level-description">
+                            Animación fluida de lado a lado y rotación interactiva sin scripts.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- CONTENEDOR DE LOS MODELOS 3D -->
+                <div class="viewer-box" id="viewerBox">
+
+                    <!-- GRAPADORA 01 -->
+                    <div class="model-wrapper animacion-izquierda">
+
+                        <span class="model-label">
+                            GRAPADORA ROJA // MINI
+                        </span>
+
+                        <model-viewer
+                            id="viewer1"
+                            src="docs/objetos_3d/mini_grapadora_roja.glb"
+                            alt="Grapadora roja miniatura en 3D"
+                            camera-controls
+                            disable-zoom
+                            auto-rotate
+                            rotation-per-second="20deg"
+                            interaction-prompt="none"
+                            shadow-intensity="1.5"
+                            exposure="1.2"
+                            environment-image="neutral"
+                            camera-orbit="0deg 75deg 105%"
+                            camera-target="auto"
+                            field-of-view="30deg">
+                        </model-viewer>
+
+                    </div>
+
+                    <!-- GRAPADORA 02 -->
+                    <div class="model-wrapper animacion-derecha">
+
+                        <span class="model-label">
+                            GRAPADORA ACTUAL // INDUSTRIAL
+                        </span>
+
+                        <model-viewer
+                            id="viewer2"
+                            src="docs/objetos_3d/grapadora.glb"
+                            alt="Grapadora industrial en 3D"
+                            camera-controls
+                            disable-zoom
+                            auto-rotate
+                            rotation-per-second="20deg"
+                            interaction-prompt="none"
+                            shadow-intensity="1.5"
+                            exposure="1.2"
+                            environment-image="neutral"
+                            camera-orbit="0deg 75deg 105%"
+                            camera-target="auto"
+                            field-of-view="30deg">
+                        </model-viewer>
+
+                    </div>
+
+                </div>
+
+                <!-- INFORMACIÓN INFERIOR -->
+                <div class="battle-footer">
+
+                    <div class="target-status">
+                        <span class="status-dot"></span>
+                        <span>SISTEMAS ONLINE</span>
+                    </div>
+
+                    <div class="shoot-hint">
+                        ↔ HAZ CLIC Y ARRASTRA PARA MANIPULAR LAS PIEZAS TRIDIMENSIONALES
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+        <!-- PIE DE PÁGINA -->
+        <footer class="bottom-footer">
+
+            <span>NEBULA STUDIO © 2026</span>
+
+            <span>TACTICAL CATALOGUE // VERSION 2.2</span>
+
+            <span>PURE CSS MODE</span>
+
+        </footer>
+
+    </main>
+
+</body>
+</html>
